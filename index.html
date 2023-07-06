@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- FONTAWESOME CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- AOS CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/script.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Bootstrap Navbar</title>
+</head>
+
+
+
+
+<body>
+    <!--! NAVBAR START -->
+    <nav id="navbar_id" class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark  p-3">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fa-brands fa-blogger"></i>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#header_id">Anasayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#messages">Çalışmalarımız</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#parallax">Hakkımızda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#newspaper">Yeni Haberler</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">İletişim</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Ara" aria-label="Search">
+                    <button class="btn btn-danger" type="submit">Ara</button>
+                </form>
+                <ul class="navbar-nav ms-auto me-3">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" id="userDropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user" style="width: 20px; height: 20px;"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end bg-dark mt-2" aria-labelledby="userDropdown">
+                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                    data-bs-target="#loginId">Login</a></li>
+                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                    data-bs-target="#registerId">Register</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <button class="btn btn-danger" onclick="darkModu()"> <i class="fa-solid fa-moon"></i></button>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <select class="form-select bg-danger border-0 text-white" aria-label="Default select example">
+                            <option selected>TR</option>
+                            <option value="1">ENG</option>
+                          </select>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--! NAVBAR END -->
+
+    <!--! MODAL START -->
+    <div class="modal fade" id="loginId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog"
+        aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitleId">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <!-- Email input -->
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="form5Example2">Email address</label>
+                            <input type="email" id="form5Example2" class="form-control" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="" class="form-label">Password</label>
+                            <input type="password" class="form-control" name="" id="" placeholder="">
+                        </div>
+
+                        <!-- Submit button -->
+                        <button type="submit" class="btn btn-danger btn-block mb-4">Login</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="registerId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
+        role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitleId">Register</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <!-- Name input -->
+                        <div class="form-outline mb-4">
+                            <input type="text" id="form5Example1" class="form-control" />
+                            <label class="form-label" for="form5Example1">Name</label>
+                        </div>
+
+                        <!-- Email input -->
+                        <div class="form-outline mb-4">
+                            <input type="email" id="form5Example2" class="form-control" />
+                            <label class="form-label" for="form5Example2">Email address</label>
+                        </div>
+
+                        <div class="mb-3">
+                            <input type="password" class="form-control" name="" id="" placeholder="password..">
+                            <label for="" class="form-label">Password</label>
+                        </div>
+
+                        <!-- Checkbox -->
+                        <div class="form-check d-flex justify-content-center mb-4">
+                            <input class="form-check-input me-2" type="checkbox" value="" id="form5Example3" checked />
+                            <label class="form-check-label" for="form5Example3">
+                                I have read and agree to the terms
+                            </label>
+                        </div>
+
+                        <!-- Submit button -->
+                        <button type="submit" class="btn btn-success     btn-block mb-4">Subscribe</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--! MODAL END -->
+
+    <!--! HEADER START -->
+    <header id="header_id" class="d-flex flex-column align-items-center justify-content-around">
+        <div class="container">
+            <div class="headerTitle">
+                <h1>FRONT END EĞİTİMİMİZE HOŞGELDİNİZ</h1>
+            </div>
+            <div class="headerSubtitle d-flex flex-column gap-5">
+                <div class="headerText mb-5">
+                    <p>HTML5 CSS3 JAVASCRİPT REACT</p>
+                </div>
+                <div class="headerLinks d-flex align-items-center justify-content-center gap-4">
+                    <a href="" class="fs-5 btn btn-primary">Linkedin</a>
+                    <a href="" class="fs-5 btn btn-danger">Blog</a>
+                    <a href="" class="fs-5 btn btn-success">Youtube</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--! HEADER END -->
+
+    <!--! MAİN START -->
+    <main id="main_id">
+        <!--! MESSAGES START -->
+        <section id="messages">
+            <div class="container">
+                <div>
+                    <h2 class="mainTitles text-center mb-5">Çalışmalarımız</h2>
+                </div>
+                <div class="row  justify-content-center gap-4 p-3">
+                    <div data-aos="fade-up" data-aos-duration="1000"
+                        class="text-center col-lg col-md-4 col-sm-4 col-xs-12 mb-4 p-4 d-flex flex-column border border-danger border-3">
+                        <i class="fa-brands fa-html5 text-danger"></i>
+                        <h4>Html5</h4>
+                        <p class="line-clamp4 text-start">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet
+                            sed in dolore, voluptas voluptatum recusandae.</p>
+                        <button class="btn btn-danger">Daha fazla ..</button>
+                    </div>
+
+                    <div data-aos="fade-down" data-aos-duration="1000"
+                        class="text-center col-lg col-md-4 col-sm-4 col-xs-12 mb-4 p-4 d-flex flex-column border border-primary border-3">
+                        <i class="fa-brands fa-css3 text-primary"></i>
+                        <h4>Css3</h4>
+                        <p class="line-clamp4 text-start">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet
+                            sed in dolore, voluptas voluptatum recusandae.</p>
+                        <button class="btn btn-primary">Daha fazla ..</button>
+                    </div>
+
+                    <div data-aos="fade-up" data-aos-duration="1000"
+                        class="text-center col-lg col-md-4 col-sm-4 col-xs-12 mb-4 p-4 d-flex flex-column border border-warning border-3">
+                        <i class="fa-brands fa-js text-warning"></i>
+                        <h4>JavaScript</h4>
+                        <p class="line-clamp4 text-start">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet
+                            sed in dolore, voluptas voluptatum recusandae.</p>
+                        <button class="btn btn-warning">Daha fazla ..</button>
+                    </div>
+
+                    <div data-aos="fade-down" data-aos-duration="1000"
+                        class="text-center col-lg col-md-4 col-sm-4 col-xs-12 mb-4 p-4 d-flex flex-column border border-info border-3">
+                        <i class="fa-brands fa-react text-info"></i>
+                        <h4>React JS</h4>
+                        <p class="line-clamp4 text-start">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet
+                            sed in dolore, voluptas voluptatum recusandae.</p>
+                        <button class="btn btn-info">Daha fazla ..</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--! MESSAGES END -->
+
+        <!--! PARALLAX START -->
+        <section id="parallax">
+            <div class="container">
+                <div class="row">
+                    <h2 class="mainTitles text-center">Hakkımızda</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum dolor
+                        accusantium ut et deserunt. Accusantium eius, dicta voluptates recusandae in possimus
+                        repellendus nesciunt, illum reiciendis nam veniam quam molestias tenetur.
+                        Molestias ab excepturi ex accusamus consectetur, consequuntur expedita! Aperiam sint corrupti
+                        dolorum aspernatur quidem explicabo officiis quas repellendus. Iste illo facilis error similique
+                        harum dolor cumque laudantium sapiente libero tempora.
+                        Perferendis ea eveniet impedit deserunt molestias asperiores rerum facilis itaque nemo, corporis
+                        veritatis adipisci, voluptas nulla temporibus unde provident esse similique eius. Omnis,
+                        deserunt! Aliquid impedit similique natus accusamus ipsam.
+                        A corrupti cupiditate fugiat voluptates, minima officiis mollitia culpa velit sit ea eos
+                        consequatur architecto perspiciatis officia quos esse. Totam sunt eaque ab delectus inventore
+                        cum quod blanditiis quidem ipsam!
+                        Tempora quisquam iste cupiditate eaque vel? Architecto quia enim, repellat nam ea tempora odio
+                        distinctio repellendus laudantium aut. A eveniet accusantium quasi possimus quisquam itaque
+                        culpa aperiam voluptate commodi delectus.
+                        Non maxime eius illum quia at explicabo officia ipsa hic officiis reiciendis nam id, harum,
+                        laborum voluptatem soluta? Modi assumenda quaerat vitae, reiciendis repellat inventore quod
+                        beatae architecto nam maiores?
+                        Harum nobis dolore dignissimos, officiis molestiae excepturi laudantium qui. Placeat suscipit
+                        fugit ad voluptatem eius repellendus amet reprehenderit facere eligendi itaque est tenetur
+                        minima dicta ea dolores maiores, adipisci accusantium?
+                        Dolorum rem voluptas sapiente quae nihil molestias. Quos vero ex eum harum id voluptatibus iste
+                        quisquam dolorum! Mollitia magni obcaecati, fugit corrupti aperiam quaerat delectus culpa
+                        voluptatem repellat? Animi, iure.
+                        Laborum, nesciunt itaque placeat quo a, accusamus odit modi eveniet earum ratione, facilis est
+                        sequi. Maiores asperiores aliquid quae, quaerat a, deserunt odit qui totam quo quis fugiat id
+                        provident.
+                        Placeat fugiat recusandae consequuntur, nemo iure nostrum mollitia laboriosam quas. Est
+                        consequuntur accusantium ad a adipisci. Corporis deleniti quo culpa cum quidem? Qui aliquid ab,
+                        consequatur doloremque exercitationem et repudiandae.
+                        Praesentium, quia reprehenderit, ipsam magnam esse deserunt officia quae dignissimos ex,
+                        blanditiis eos quos exercitationem iusto? Voluptate culpa magnam, ipsum molestias deserunt animi
+                        possimus! Officiis velit cupiditate possimus? Quam, cumque?
+                        Voluptates, repellat. Temporibus nostrum molestias officia adipisci, ipsum similique repellat ex
+                        veniam, nobis, quisquam quo atque consectetur iure quaerat aliquid dolor saepe sequi? Quaerat
+                        accusamus at sed perferendis! Incidunt, excepturi.</p>
+                    <div class="mt-2 text-center"><a class="btn btn-primary"> Daha Fazla ... </a></div>
+                </div>
+            </div>
+        </section>
+        <!--! PARALLAX END -->
+
+        <!--! NEWSPAPER START -->
+        <section id="newspaper">
+            <div class="container">
+                <h2 class="mainTitles text-center">Yeni Haberler</h2>
+                <p data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+                    >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum dolor
+                    accusantium ut et deserunt. Accusantium eius, dicta voluptates recusandae in possimus
+                    repellendus nesciunt, illum reiciendis nam veniam quam molestias tenetur.
+                    Molestias ab excepturi ex accusamus consectetur, consequuntur expedita! Aperiam sint corrupti
+                    dolorum aspernatur quidem explicabo officiis quas repellendus. Iste illo facilis error similique
+                    harum dolor cumque laudantium sapiente libero tempora.
+                    Perferendis ea eveniet impedit deserunt molestias asperiores rerum facilis itaque nemo, corporis
+                    veritatis adipisci, voluptas nulla temporibus unde provident esse similique eius. Omnis,
+                    deserunt! Aliquid impedit similique natus accusamus ipsam.
+                    A corrupti cupiditate fugiat voluptates, minima officiis mollitia culpa velit sit ea eos
+                    consequatur architecto perspiciatis officia quos esse. Totam sunt eaque ab delectus inventore
+                    cum quod blanditiis quidem ipsam!
+                    Tempora quisquam iste cupiditate eaque vel? Architecto quia enim, repellat nam ea tempora odio
+                    distinctio repellendus laudantium aut. A eveniet accusantium quasi possimus quisquam itaque
+                    culpa aperiam voluptate commodi delectus.
+                    Non maxime eius illum quia at explicabo officia ipsa hic officiis reiciendis nam id, harum,
+                    laborum voluptatem soluta? Modi assumenda quaerat vitae, reiciendis repellat inventore quod
+                    beatae architecto nam maiores?
+                    Harum nobis dolore dignissimos, officiis molestiae excepturi laudantium qui. Placeat suscipit
+                    fugit ad voluptatem eius repellendus amet reprehenderit facere eligendi itaque est tenetur
+                    minima dicta ea dolores maiores, adipisci accusantium?
+                    Dolorum rem voluptas sapiente quae nihil molestias. Quos vero ex eum harum id voluptatibus iste
+                    quisquam dolorum! Mollitia magni obcaecati, fugit corrupti aperiam quaerat delectus culpa
+                    voluptatem repellat? Animi, iure.
+                    Laborum, nesciunt itaque placeat quo a, accusamus odit modi eveniet earum ratione, facilis est
+                    sequi. Maiores asperiores aliquid quae, quaerat a, deserunt odit qui totam quo quis fugiat id
+                    provident.
+                    Placeat fugiat recusandae consequuntur, nemo iure nostrum mollitia laboriosam quas. Est
+                    consequuntur accusantium ad a adipisci. Corporis deleniti quo culpa cum quidem? Qui aliquid ab,
+                    consequatur doloremque exercitationem et repudiandae.
+                    Praesentium, quia reprehenderit, ipsam magnam esse deserunt officia quae dignissimos ex,
+                    blanditiis eos quos exercitationem iusto? Voluptate culpa magnam, ipsum molestias deserunt animi
+                    possimus! Officiis velit cupiditate possimus? Quam, cumque?
+                    Voluptates, repellat. Temporibus nostrum molestias officia adipisci, ipsum similique repellat ex
+                    veniam, nobis, quisquam quo atque consectetur iure quaerat aliquid dolor saepe sequi? Quaerat
+                    accusamus at sed perferendis! Incidunt, excepturi.</p>
+                <div class="text-center"><a class="btn btn-outline-danger"> Daha Fazla ... </a></div>
+            </div>
+        </section>
+        <!--! NEWSPAPER END -->
+
+        <section id="blog">
+            <div class="container">
+                <h2 class="mainTitles text-center mb-5 mt-5">Blog</h2>
+                <div class="row">
+                    <div class="col-xl-3 col-lg-4 col-md-6 mb-3" data-aos="fade-right" data-aos-duration="1000">
+                        <div class="card">
+                            <img src="assets/img/blogImg/pexels-realtoughcandycom-11035371.jpg" class="card-img-top"
+                                alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Card title</h5>
+                                <p class="card-text text-dark">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                    Excepturi eum ipsam dolorem harum consequatur et dolor odit vitae, eaque at commodi
+                                    assumenda tenetur atque doloribus quis ut nam alias. Atque!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 mb-3" data-aos="fade-right" data-aos-duration="1000">
+                        <div class="card">
+                            <img src="assets/img/blogImg/pexels-realtoughcandycom-11035386.jpg" class="card-img-top"
+                                alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Card title</h5>
+                                <p class="card-text text-dark">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                    Excepturi eum ipsam dolorem harum consequatur et dolor odit vitae, eaque at commodi
+                                    assumenda tenetur atque doloribus quis ut nam alias. Atque!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 mb-3" data-aos="fade-right" data-aos-duration="1000">
+                        <div class="card">
+                            <img src="assets/img/blogImg/pexels-realtoughcandycom-11035463.jpg" class="card-img-top"
+                                alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Card title</h5>
+                                <p class="card-text text-dark">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                    Excepturi eum ipsam dolorem harum consequatur et dolor odit vitae, eaque at commodi
+                                    assumenda tenetur atque doloribus quis ut nam alias. Atque!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 mb-3" data-aos="fade-right" data-aos-duration="1000">
+                        <div class="card">
+                            <img src="assets/img/blogImg/pexels-realtoughcandycom-11035471 (1).jpg" class="card-img-top"
+                                alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Card title</h5>
+                                <p class="card-text text-dark">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                    Excepturi eum ipsam dolorem harum consequatur et dolor odit vitae, eaque at commodi
+                                    assumenda tenetur atque doloribus quis ut nam alias. Atque!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 mb-3" data-aos="fade-right" data-aos-duration="1000">
+                        <div class="card">
+                            <img src="assets/img/blogImg/pexels-realtoughcandycom-11035543.jpg" class="card-img-top"
+                                alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Card title</h5>
+                                <p class="card-text text-dark">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                    Excepturi eum ipsam dolorem harum consequatur et dolor odit vitae, eaque at commodi
+                                    assumenda tenetur atque doloribus quis ut nam alias. Atque!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 mb-3" data-aos="fade-right" data-aos-duration="1000">
+                        <div class="card">
+                            <img src="assets/img/blogImg/pexels-realtoughcandycom-11035539.jpg" class="card-img-top"
+                                alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Card title</h5>
+                                <p class="card-text text-dark">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                    Excepturi eum ipsam dolorem harum consequatur et dolor odit vitae, eaque at commodi
+                                    assumenda tenetur atque doloribus quis ut nam alias. Atque!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 mb-3" data-aos="fade-right" data-aos-duration="1000">
+                        <div class="card">
+                            <img src="assets/img/blogImg/pexels-realtoughcandycom-11035474.jpg" class="card-img-top"
+                                alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Card title</h5>
+                                <p class="card-text text-dark">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                    Excepturi eum ipsam dolorem harum consequatur et dolor odit vitae, eaque at commodi
+                                    assumenda tenetur atque doloribus quis ut nam alias. Atque!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 mb-3" data-aos="fade-right" data-aos-duration="1000">
+                        <div class="card">
+                            <img src="assets/img/blogImg/pexels-realtoughcandycom-11035366.jpg" class="card-img-top"
+                                alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Card title</h5>
+                                <p class="card-text text-dark">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                    Excepturi eum ipsam dolorem harum consequatur et dolor odit vitae, eaque at commodi
+                                    assumenda tenetur atque doloribus quis ut nam alias. Atque!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container mb-5">
+                <h2 class="mainTitles text-center mb-5 mt-5">İletişim</h2>
+                <div class="row ">
+                    <div class="col-md-6 mt-3">
+                        <div style="width: 100%"><iframe width="100%" height="450px" frameborder="0" scrolling="no"
+                                marginheight="0" marginwidth="0"
+                                src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=erzincan+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
+                                    href="https://www.maps.ie/distance-area-calculator.html">measure acres/hectares
+                                    on map</a></iframe>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-3">
+                        <div class="row form">
+                            <div class="col">
+                                <label class="form-label">Fullname</label>
+                                <input type="text" class="form-control" placeholder="Full name"
+                                    aria-label="Full name" />
+                            </div>
+
+                            <div class="col">
+                                <label for="inputEmail4" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="inputEmail4" placeholder="E-mail" />
+                            </div>
+                        </div>
+
+                        <div class="row formComment mb-2">
+                            <div class="form-floating col">
+                                <p>Comments</p>
+                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                                    style="height: 300px"></textarea>
+                                <label for="floatingTextarea2"></label>
+                            </div>
+                        </div>
+                        <div class="contactBtn">
+                            <button class="btn btn-danger">SEND</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!--! MAİN END -->
+
+    <!--! FOOTER START -->
+    <footer id="footer_id" class="bg-dark">
+        <div class="container">
+            <div class="text-center p-4 text-white" id="copy_right">2023- <span id="date_id"></span> &copy; Bütün Haklar
+                saklıdır</div>
+        </div>
+        <a href="#header_id" id="back_top" class="btn btn-info d-block"><i class="fa-solid fa-arrow-up-long "></i><i
+            class="fa-solid fa-arrow-up-long "></i><i class="fa-solid fa-arrow-up-long "></i></a>
+    </footer>
+    <!--! FOOTER END -->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

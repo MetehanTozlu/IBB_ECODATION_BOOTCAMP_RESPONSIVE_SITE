@@ -1,0 +1,179 @@
+/*
+Project : One Page
+Author  : Metehan Tozlu
+Date    : 25 /June /2023
+Version : v.1
+*/
+
+/*! BASE CSS START */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    line-height: 1.2;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/*! BASE CSS END */
+/* ################################################################ */
+/*! NAVBAR END */
+.nav-item a {
+    color: #fafafa;
+}
+
+.nav-item a:hover {
+    color: #94d024;
+    transform: scale(1.1);
+    transition: all .4s ease;
+}
+
+/*! NAVBAR START */
+/* ################################################## */
+/*! HEADER START */
+header {
+    background-image: url("./img/pexels-danny-meneses-943096.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 90vh;
+    padding-top: 4rem;
+}
+
+.headerTitle {
+    background: #000000;
+    padding: 1rem;
+    margin: 1rem;
+    box-shadow: rgba(177, 35, 35, 0.56);
+    border-radius: 0.9375rem;
+}
+
+.headerTitle h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fafafa;
+}
+
+.headerText p{
+    text-align: center;
+    color: #fafafa;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/*! HEADER END */
+
+/* Messages */
+#messages{
+    margin-top:1rem;
+    margin-bottom:3rem;
+}
+
+.mainTitles{
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+#messages > .container > .row > .text-center> p{
+    color:black!important;
+}
+
+#messages i{
+    color:blue;
+    font-size: 5rem;
+}
+
+
+
+/* parallax */
+#parallax{
+    
+    background-image: url(img/pexels-negative-space-34153.jpg);
+    background-size: cover;
+    height: 50rem;
+    padding:2rem;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+#parallax > h2,p{
+    color:#fafafa;
+}
+
+#parallax h2{
+    color: #fafafa;
+}
+
+/* newspaper */
+#newspaper  {  
+   height: auto;
+   padding:2rem;
+}
+#newspaper p {  
+    color:black!important;  
+    text-align: justify;
+}
+
+/*! RESPONSİVE START */
+
+@media (max-width:1200px){
+    html{
+        font-size: 13.5px;
+    }
+}
+
+@media (max-width:992px){
+    html{
+        font-size: 14px;
+    }
+
+    .nav-item a:hover {
+        color: #94d024;
+        transform: scale(1);
+        transition: all .4s ease;
+    }
+
+    .form-select{
+        margin-top: 0.8rem;
+        margin-left: -.6rem;
+        width: 10%;
+    }
+}
+
+@media (max-width:768px){
+    html{
+        font-size: 13px;
+    }
+}
+
+@media (max-width:548px){
+    
+}
+
+.dark_mode{
+    background-color: rgb(43, 43, 43);
+    color: #ffffff !important;
+}
+
+
+
